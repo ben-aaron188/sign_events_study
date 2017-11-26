@@ -1,0 +1,197 @@
+/*for all devices*/
+#html1 * {
+    font-family: "Helvetica" !important;
+    background-color: White;
+    color: Black;
+    font-weight: lighter;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+}
+
+/*desktop only*/
+@media only screen and (min-width: 768px) {
+  .navig {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 7vw;
+      top: 90%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 1%;
+  }
+
+  #next {
+      left: 10%;
+  }
+
+  #ic {
+      border: 0.3vw solid #FFBF00;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      max-height: 50%;
+      width: 60%;
+      padding: 1%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 1.3vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+  .main_instructions {
+      border: 0.4vw solid Black;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      height: 40%;
+      width: 50%;
+      padding: 2%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 1.3vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+}
+
+/*mobile portrait*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .navig {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15vw;
+      top: 90%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 1%;
+  }
+
+  #next {
+      left: 50%;
+  }
+
+
+  #ic {
+      border: 0.3vw solid #FFBF00;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      max-height: 50%;
+      width: 70%;
+      padding: 1%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 1.3vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+  .main_instructions {
+      border: 0.75vw solid Black;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      max-height: 50%;
+      width: 70%;
+      padding: 2%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 4vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+}
+
+/*mobile landscape*/
+@media only screen and (min-device-width : 480px){
+  .navig {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 10vw;
+      top: 90%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-top: 1%;
+  }
+
+  #next {
+      left: 50%;
+  }
+
+
+  #ic {
+      border: 0.3vw solid #FFBF00;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      max-height: 40%;
+      width: 70%;
+      padding: 1%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 1.1vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+  .main_instructions {
+      border: 0.5vw solid Black;
+      overflow: scroll;
+      background-color: #1C1C1C;
+      overflow-x: hidden;
+      max-height: 40%;
+      width: 60%;
+      padding: 2%;
+      margin: 0;
+      position: absolute;
+      text-align: left;
+      font-size: 2.5vw;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
+  }
+
+}
