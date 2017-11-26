@@ -1,1 +1,3 @@
-# chat2_exp
+# code for exp. task for sign. events study
+
+... more details to follow soon ...
