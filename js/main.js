@@ -1,5 +1,6 @@
 // minimal task flow
 $(document).ready(function() {
+  // get_condition_from_db(display_condition_details);
   var text = introduction;
   $('body').prepend('<div id="intro1" class="main_instructions">' + text + '</div>');
   $("#intro1").show();
@@ -13,6 +14,7 @@ $(document).ready(function() {
 });
 
 function to_informed_consent() {
+  // conditions = get_cond_from_ajax(condition_meta);
   $("#back").hide();
   var text = ic;
   $('body').prepend('<div id="informed_consent" class="main_instructions">' + text + '</div>');

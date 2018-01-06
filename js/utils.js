@@ -649,6 +649,41 @@ function get_cond() {
   return conds;
 }
 
+function get_cond_from_ajax(ajax_retrieved_obj) {
+  var veracity;
+  // 0: truthful
+  // 1: deceptive
+  // var cb = randomdigit(0, 1);
+  var check;
+  // 0: check
+  // 1: nocheck
+  var control_cond = ajax_retrieved_obj.cond_cond;
+  var control_id = ajax_retrieved_obj.cond_id;
+  var control_status = ajax_retrieved_obj.cond_status;
+  if (ajax_retrieved_obj.cond_cond == 1) {
+    veracity = 0;
+    check = 0;
+  } else if (ajax_retrieved_obj.cond_cond == 2) {
+    veracity = 0;
+    check = 1;
+  } else if (ajax_retrieved_obj.cond_cond == 3) {
+    veracity = 1;
+    check = 0;
+  } else if (ajax_retrieved_obj.cond_cond == 4) {
+    veracity = 1;
+    check = 1;
+  }
+
+  var conds = {
+    'veracity': veracity,
+    'check': check,
+    'control_id': control_id,
+    'control_status': control_status,
+    'control_cond': control_cond
+  };
+  return conds;
+}
+
 
 function select_manipulation(temporality, language) {
   var selected_obj;
