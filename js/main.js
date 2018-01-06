@@ -75,8 +75,8 @@ function build_html(url_param) {
 
 function start_task() {
   // submit data TODO: ENABLE
-  // get_data();
-  // pre_collect_php(JSON.stringify(data));
+  get_data();
+  pre_collect_php(JSON.stringify(data));
   // window.location = '../html/tf_embed.html';
   window.document.body.innerHTML = tf_embed_html.documentElement.innerHTML;
 }
