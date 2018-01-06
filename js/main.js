@@ -7,7 +7,7 @@ $(document).ready(function() {
   $("#next").attr('onclick', 'to_informed_consent()');
   setTimeout(function() {
     init_data();
-    getIP();
+    conditions = get_cond();
     get_unid();
   }, 100);
 });
@@ -21,138 +21,74 @@ function to_informed_consent() {
 }
 
 function to_main_instructions1() {
-  var text = instruction_general_1_t;
+  var text;
+  if (conditions.veracity == 0) {
+    if (conditions.check == 0) {
+      text = instruction_general_1_t_nc;
+    } else if (conditions.check == 1) {
+      text = instruction_general_1_t_c;
+    }
+    $("#next").attr('onclick', 'to_main_instructions2()');
+  } else if (conditions.veracity == 1) {
+    if (conditions.check == 0) {
+      text = instruction_general_1_f_nc;
+    } else if (conditions.check == 1) {
+      text = instruction_general_1_f_c;
+    }
+    $("#next").attr('onclick', 'to_main_instructions1_1()');
+  }
   $('body').prepend('<div id="main_instructions1" class="main_instructions">' + text + '</div>');
   simple_transition_2($(".main_instructions"), $("#main_instructions1"));
-  $("#next").attr('onclick', 'to_main_instructions2()');
 }
 
+function to_main_instructions1_1() {
+  // assign activity!
+  // var text = instruction_general_2_f;
+  // $('body').prepend('<div id="main_instructions1" class="main_instructions">' + text + '</div>');
+  // simple_transition_2($(".main_instructions"), $("#main_instructions1"));
+  // $("#next").attr('onclick', 'to_main_instructions2()');
+}
+
+
 function to_main_instructions2() {
-  var text = instruction_general_2;
+  typefrom_url = get_url(unid);
+  console.log(typefrom_url);
+  build_html(typefrom_url);
+  // var text = instruction_general_2;
+  var text = 'For our research it is important that you do this task seriously. Unfortunately, we will have to exclude participants who did not follow the instructions.</br>If you click on the arrow to proceed, you will see the actual task. Upon completing the task, you can will be redirected to prolific. Your username for this task is: ' + unid;
   $('body').prepend('<div id="main_instructions2" class="main_instructions">' + text + '</div>');
   simple_transition_2($(".main_instructions"), $("#main_instructions2"));
   $("#next").attr('onclick', 'start_task()');
 }
 
-function start_task(){
-  window.location = '../html/tf_embed.html';
+function build_html(url_param) {
+  var html_to_parse = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><!-- <title></title> --><style type="text/css">html {margin: 0;height: 100%;overflow: hidden;}iframe {position: absolute;left: 0;right: 0;bottom: 0;top: 0;border: 0;}</style></head><body> <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src=' + url_param + '></iframe><script type="text/javascript" src="https://embed.typeform.com/embed.js"></script></body></html>';
+
+  // var iframe = document.createElement('iframe');
+  // var html = '<body>Foo</body>';
+  // iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+  // document.body.appendChild(iframe);
+  var parser = new DOMParser();
+  tf_embed_html = parser.parseFromString(html_to_parse, "text/html");
+  console.log(tf_embed_html);
+}
+
+function start_task() {
+  // submit data TODO: ENABLE
+  // get_data();
+  // pre_collect_php(JSON.stringify(data));
+  // window.location = '../html/tf_embed.html';
+  window.document.body.innerHTML = tf_embed_html.documentElement.innerHTML;
 }
 
 
 function get_data() {
-  var bilingual_bool = $("#bilingual_sel_en").val();
-  var age = $("#age_sel_en").val();
-  var gender = $("#gender_sel_en").val();
-  var origin = $("#origin_sel_en").val();
-  var education = $("#education_sel_en").val();
-  var lang1 = $("#lang1_sel_en").val();
-  var lang2 = $("#lang2_sel_en").val();
-  var clientip_resolved;
-  if (typeof clientip === 'undefined') {
-    clientip_resolved = '999999999';
-  } else {
-    clientip_resolved = clientip;
-  }
-  data.ip = clientip_resolved;
   data.browsername = $.browser.name;
   data.browserversion = $.browser.version;
+  data.osname = $.browser.os.name;
+  data.osversion = $.browser.os.version;
   data.ts_time = moment().format('LTS');
   data.ts_date = moment().format('l');
   data.unid = unid;
-  data.unidin = $("#unidin").val();
-  data.crowdf = $("#crowdf").val();
-  data.gender = gender;
-  data.age = age;
-  data.education = education;
-  data.origin = origin;
-  data.bilingual_sel = bilingual_bool;
-  data.lang1_sel = lang1;
-  data.lang2_sel = lang2;
-  data.cond_lang = conditions.cond_lang;
-  data.cond_ver = conditions.cond_ver;
-  data.time = conditions.time;
-
-  data.manipulation_check1 = $("#manipulation_check1_val").val();
-  data.manipulation_check2 = $("#manipulation_check2_val").val();
-  data.manipulation_check3 = $("#manipulation_check3_val").val();
-  data.manipulation_check4 = $("#manipulation_check4_val").val();
-  data.manipulation_check5 = $("#manipulation_check5_val").val();
-  data.manipulation_check6 = $("#manipulation_check6_val").val();
-  data.manipulation_check7 = $("#manipulation_check7_val").val();
-  data.manipulation_check8 = $("#manipulation_check8_val").val();
-  data.manipulation_check9 = $("#manipulation_check9_val").val();
-  data.manipulation_check10 = $("#manipulation_check10_val").val();
-  data.manipulation_check11 = $("#manipulation_check11_val").val();
-  data.manipulation_check12 = $("#manipulation_check12_val").val();
-  data.manipulation_check13 = $("#manipulation_check13_val").val();
-  data.manipulation_check14 = $("#manipulation_check14_val").val();
-
-  data.activity = instructive;
-  data.n_activities = n_activities;
-
-  data.selected_activities = selected_activities;
-
-  data.chat_chat_name = chat_meta.chat_name;
-  data.chat_chat_pw = chat_meta.chat_pw;
-  data.chat_user_name = chat_meta.user_name;
-  data.chat_user_pw = chat_meta.user_pw;
-}
-
-function get_data_now() {
-  var bilingual_bool = $("#bilingual_sel_en").val();
-  var age = $("#age_sel_en").val();
-  var gender = $("#gender_sel_en").val();
-  var origin = $("#origin_sel_en").val();
-  var education = $("#education_sel_en").val();
-  var lang1 = $("#lang1_sel_en").val();
-  var lang2 = $("#lang2_sel_en").val();
-  var clientip_resolved;
-  if (typeof clientip === 'undefined') {
-    clientip_resolved = '999999999';
-  } else {
-    clientip_resolved = clientip;
-  }
-  data.ip = clientip_resolved;
-  data.browsername = $.browser.name;
-  data.browserversion = $.browser.version;
-  data.ts_time = moment().format('LTS');
-  data.ts_date = moment().format('l');
-  data.unid = unid;
-  data.unidin = $("#unidin").val();
-  data.crowdf = $("#crowdf").val();
-  data.gender = gender;
-  data.age = age;
-  data.education = education;
-  data.origin = origin;
-  data.bilingual_sel = bilingual_bool;
-  data.lang1_sel = lang1;
-  data.lang2_sel = lang2;
-  data.cond_lang = conditions.cond_lang;
-  data.cond_ver = conditions.cond_ver;
-  data.time = conditions.time;
-
-  data.manipulation_check1 = $("#manipulation_check1_val").val();
-  data.manipulation_check2 = $("#manipulation_check2_val").val();
-  data.manipulation_check3 = $("#manipulation_check3_val").val();
-  data.manipulation_check4 = $("#manipulation_check4_val").val();
-  data.manipulation_check5 = $("#manipulation_check5_val").val();
-  data.manipulation_check6 = $("#manipulation_check6_val").val();
-  data.manipulation_check7 = $("#manipulation_check7_val").val();
-  data.manipulation_check8 = $("#manipulation_check8_val").val();
-  data.manipulation_check9 = $("#manipulation_check9_val").val();
-  data.manipulation_check10 = $("#manipulation_check10_val").val();
-  data.manipulation_check11 = $("#manipulation_check11_val").val();
-  data.manipulation_check12 = $("#manipulation_check12_val").val();
-  data.manipulation_check13 = $("#manipulation_check13_val").val();
-  data.manipulation_check14 = $("#manipulation_check14_val").val();
-
-  data.activity = instructive;
-  data.n_activities = n_activities;
-
-  data.selected_activities = selected_activities;
-
-  data.chat_chat_name = chat_meta.chat_name;
-  data.chat_chat_pw = chat_meta.chat_pw;
-  data.chat_user_name = chat_meta.user_name;
-  data.chat_user_pw = chat_meta.user_pw;
+  data.condition = conditions.veracity;
 }

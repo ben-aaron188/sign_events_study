@@ -637,48 +637,14 @@ function randomdigit(min, max) {
 }
 
 function get_cond() {
-  var cond_lang = 1;
-  // 0: Dutch
-  // 1: English
-  var cond_ver = randomdigit(0, 1);
-  // var cond_ver = 1;
-  // 0: truthful
-  // 1: deceptive
-  // var cb = randomdigit(0, 1);
-  var cb = 1;
-  // 0: past
-  // 1: future
-  var conds = {
-    'cond_lang': cond_lang,
-    'cond_ver': cond_ver,
-    'time': cb
-  };
-  return conds;
-}
-
-function get_cond_2(validator_var) {
-  var cond_ver;
-  if ($.inArray("none of the above", validator_var) == -1) {
-    // cond_ver = 0;
-    cond_ver = randomdigit(0, 1);
-  } else {
-    cond_ver = 1;
-  }
-  var cond_lang = 1;
-  // 0: Dutch
-  // 1: English
   // var cond_ver = randomdigit(0, 1);
-  // var cond_ver = 1;
-  // 0: truthful
-  // 1: deceptive
-  // var cb = randomdigit(0, 1);
-  var cb = 1;
-  // 0: past
-  // 1: future
+  var cond_ver = 0;
+  var cond_check = randomdigit(0, 1);
+  // 0 = t
+  // 1 = f
   var conds = {
-    'cond_lang': cond_lang,
-    'cond_ver': cond_ver,
-    'time': cb
+    'veracity': cond_ver,
+    'check': cond_check
   };
   return conds;
 }
@@ -1036,7 +1002,6 @@ function set_lang_other() {
 function simple_transition_2(class_current_div, next_div) {
   class_current_div.each(function() {
     if ($(this).is(":visible")) {
-      $("#iframe_gmaps").hide();
       $(this).hide(function() {
         next_div.show();
       });
