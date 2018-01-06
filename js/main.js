@@ -83,10 +83,11 @@ function start_task() {
 
 
 function get_data() {
-  data.browsername = $.browser.name;
-  data.browserversion = $.browser.version;
-  data.osname = $.browser.os.name;
-  data.osversion = $.browser.os.version;
+  var browser_os = $.pgwBrowser();
+  data.browsername = browser_os.browser.name;
+  data.browserversion = browser_os.browser.majorVersion;
+  data.osname = browser_os.os.name;
+  data.osversion = browser_os.os.majorVersion;
   data.ts_time = moment().format('LTS');
   data.ts_date = moment().format('l');
   data.unid = unid;
