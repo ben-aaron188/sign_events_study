@@ -639,7 +639,8 @@ function randomdigit(min, max) {
 function get_cond() {
   // var cond_ver = randomdigit(0, 1);
   var cond_ver = 0;
-  var cond_check = randomdigit(0, 1);
+  // var cond_check = randomdigit(0, 1);
+  var cond_check = 0;
   // 0 = t
   // 1 = f
   var conds = {
