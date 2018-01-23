@@ -57,7 +57,7 @@ function to_main_instructions2() {
   console.log(typefrom_url);
   build_html(typefrom_url);
   // var text = instruction_general_2;
-  var text = 'For our research it is important that you do this task seriously. Unfortunately, we will have to exclude participants who did not follow the instructions.</br>If you click on the arrow to proceed, you will see the actual task. Upon completing the task, you can will be redirected to prolific. Your username for this task is: ' + unid;
+  var text = 'For our research it is important that you do this task seriously. Unfortunately, we will have to exclude participants who did not follow the instructions. Your answers should be in English language.</br>If you click on the arrow to proceed, you will see the actual task. Upon completing the task, you will be redirected to prolific.</br>Your username for this task is: ' + unid;
   $('body').prepend('<div id="main_instructions2" class="main_instructions">' + text + '</div>');
   simple_transition_2($(".main_instructions"), $("#main_instructions2"));
   $("#next").attr('onclick', 'start_task()');
