@@ -39,13 +39,12 @@ function assign_activity() {
   });
   if (activated_buttons.length < 1) {
     alert('Select at least one activity that you are NOT going to do in the next 7 days.');
-  }
-  if (activated_buttons.length > 1) {
+  } else if (activated_buttons.length > 1) {
     final_activity = shuffle(activated_buttons)[0];
     assigned_activity = final_activity.textContent;
     to_main_instructions1_2();
   } else if(activated_buttons.length == 1){
-    final_activity = activated_buttons;
+    final_activity = activated_buttons[0];
     assigned_activity = final_activity.textContent;
     to_main_instructions1_2();
   }

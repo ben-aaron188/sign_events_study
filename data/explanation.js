@@ -13,7 +13,7 @@ var instruction_general_1_f_nc = "<center>Instruction</center></br>We are intere
 
 var instruction_general_1_1_f_nc = "Please select all activities from the below that you are NOT going to do in the next 7 days.</br>You can select and deselect them by clicking/tapping them. Proceed to the next page, when you are ready";
 
-var instruction_general_1_2_f_nc = "For the rest of the experiment, you have to pretend that your most important activity in the next 7 days is the one stated below. You will now be asked questions about that activity and your task is to produce convincing and believable answers (i.e. you have to do your best to lie). Take a few moments to prepare a convincing story.";
+var instruction_general_1_2_f_nc = "For the rest of the experiment, you have to pretend that this is your most important activity in the next 7 days. You will now be asked questions about that activity and your task is to produce convincing and believable answers (i.e. you have to do your best to lie). Take a few moments to prepare a convincing story.";
 
 var instruction_general_2 = 'For our research it is important that you do this task seriously. Unfortunately, we will have to exclude participants who did not follow the instructions. Your answers should be in English language.</br>If you click on the arrow to proceed, you will see the actual task. Upon completing the task, you will be redirected to prolific.';
 

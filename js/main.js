@@ -56,7 +56,7 @@ function to_main_instructions1_1() {
 function to_main_instructions1_2() {
   var text = instruction_general_1_2_f_nc;
   $('body').prepend('<div id="main_instructions1_2" class="main_instructions">' + text + '</div>');
-  $('#main_instructions1_2').append('</br></br></br>Your fake activity is:' + '<p style="color: Red">' + assigned_activity + '</p>');
+  $('#main_instructions1_2').prepend('</br></br></br>Your fake activity is:' + '<p style="color: Red">' + assigned_activity + '</p>');
   simple_transition_2($(".main_instructions"), $("#main_instructions1_2"));
   $("#next").attr('onclick', 'to_main_instructions2()');
 }
