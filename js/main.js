@@ -44,11 +44,21 @@ function to_main_instructions1() {
 }
 
 function to_main_instructions1_1() {
-  // assign activity!
-  // var text = instruction_general_2_f;
-  // $('body').prepend('<div id="main_instructions1" class="main_instructions">' + text + '</div>');
-  // simple_transition_2($(".main_instructions"), $("#main_instructions1"));
-  // $("#next").attr('onclick', 'to_main_instructions2()');
+  var text = instruction_general_1_1_f_nc;
+  $('body').prepend('<div id="main_instructions1_1" class="main_instructions">' + text + '</div>');
+  var retrieved_activities = get_activities(3, 'batch1');
+  show_activities(retrieved_activities);
+  simple_transition_2($(".main_instructions"), $("#main_instructions1_1"));
+  // $("#next").attr('onclick', 'to_main_instructions1_2()');
+  $("#next").attr('onclick', 'assign_activity()');
+}
+
+function to_main_instructions1_2() {
+  var text = instruction_general_1_2_f_nc;
+  $('body').prepend('<div id="main_instructions1_2" class="main_instructions">' + text + '</div>');
+  $('#main_instructions1_2').append('</br></br></br>Your fake activity is:' + '<p style="color: Red">' + assigned_activity + '</p>');
+  simple_transition_2($(".main_instructions"), $("#main_instructions1_2"));
+  $("#next").attr('onclick', 'to_main_instructions2()');
 }
 
 
@@ -64,7 +74,13 @@ function to_main_instructions2() {
 }
 
 function build_html(url_param) {
-  var html_to_parse = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><!-- <title></title> --><style type="text/css">html {margin: 0;height: 100%;overflow: hidden;}iframe {position: absolute;left: 0;right: 0;bottom: 0;top: 0;border: 0;}</style></head><body> <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src=' + url_param + '></iframe><script type="text/javascript" src="https://embed.typeform.com/embed.js"></script></body></html>';
+var html_to_parse;
+  if(conditions.veracity == 0){
+  html_to_parse = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><!-- <title></title> --><style type="text/css">html {margin: 0;height: 100%;overflow: hidden;}iframe {position: absolute;left: 0;right: 0;bottom: 0;top: 0;border: 0;}</style></head><body> <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src=' + url_param + '></iframe><script type="text/javascript" src="https://embed.typeform.com/embed.js"></script></body></html>';
+} else if(conditions.veracity == 1){
+  html_to_parse = '<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><!-- <title></title> --><style type="text/css">html {margin: 0;height: 100%;overflow: hidden;}iframe {position: absolute;left: 0;right: 0;bottom: 0;top: 0;border: 0;}</style></head><body> <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src=' + url_param + '></iframe><script type="text/javascript" src="https://embed.typeform.com/embed.js"></script></body></html>';
+}
+
 
   // var iframe = document.createElement('iframe');
   // var html = '<body>Foo</body>';
@@ -94,4 +110,5 @@ function get_data() {
   data.ts_date = moment().format('l');
   data.unid = unid;
   data.condition = conditions.veracity;
+  data.assigned_activity = assigned_activity;
 }

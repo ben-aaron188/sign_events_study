@@ -2,7 +2,7 @@
 #html1 * {
     font-family: "Helvetica" !important;
     background-color: White;
-    color: Black;
+    /* color: Black; */
     font-weight: lighter;
 }
 
@@ -35,7 +35,7 @@ html {
   #ic {
       border: 0.3vw solid #FFBF00;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       max-height: 50%;
       width: 60%;
@@ -54,7 +54,7 @@ html {
   .main_instructions {
       border: 0.4vw solid Black;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       height: 40%;
       width: 50%;
@@ -97,7 +97,7 @@ html {
   #ic {
       border: 0.3vw solid #FFBF00;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       max-height: 50%;
       width: 70%;
@@ -116,7 +116,7 @@ html {
   .main_instructions {
       border: 0.75vw solid Black;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       max-height: 50%;
       width: 70%;
@@ -159,7 +159,7 @@ html {
   #ic {
       border: 0.3vw solid #FFBF00;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       max-height: 40%;
       width: 70%;
@@ -178,7 +178,7 @@ html {
   .main_instructions {
       border: 0.5vw solid Black;
       overflow: scroll;
-      background-color: #1C1C1C;
+      /* background-color: #1C1C1C; */
       overflow-x: hidden;
       max-height: 40%;
       width: 60%;
@@ -194,4 +194,14 @@ html {
       /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
   }
 
+}
+
+/* button css */
+.normal_button{
+  font-size: 1.8vw !important;
+}
+
+.active_button{
+  color: Red;
+  font-weight: bold !important;
 }
