@@ -46,7 +46,7 @@ function to_main_instructions1() {
 function to_main_instructions1_1() {
   var text = instruction_general_1_1_f_nc;
   $('body').prepend('<div id="main_instructions1_1" class="main_instructions">' + text + '</div>');
-  var retrieved_activities = get_activities(3, 'batch1');
+  var retrieved_activities = get_activities(3, 'batch4');
   show_activities(retrieved_activities);
   simple_transition_2($(".main_instructions"), $("#main_instructions1_1"));
   // $("#next").attr('onclick', 'to_main_instructions1_2()');
