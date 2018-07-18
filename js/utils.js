@@ -116,7 +116,7 @@ function randomdigit(min, max) {
 
 function get_cond() {
   // var cond_ver = randomdigit(0, 1);
-  var cond_ver = 0;
+  var cond_ver = 1;
   // MUST CHANGE URL IN create_url.js!!!!!!!!!!!!!!!
   // 0=t
   // 1=d
