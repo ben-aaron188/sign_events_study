@@ -765,5 +765,146 @@ var t_activities = [{
   }, {
     activity: "Spending some time in the music studio on a new album project which will involve many hours of work",
     batch: 'batch3'
+  }, {
+    activity: "Mountain biking ride with my boyfriend and daughter",
+    batch: 'batch4'
+  }, {
+    activity: "Going to the cat cafe in Glasgow on Tuesday for food and then to the cinema for a film",
+    batch: 'batch4'
+  }, {
+    activity: "Painting with friends at my local cafe",
+    batch: 'batch4'
+  }, {
+    activity: "Going swimming with my daughter",
+    batch: 'batch4'
+  }, {
+    activity: "Celebrating my sister's birthday with her by taking her out to a nice dinner at her favorite restaurant",
+    batch: 'batch4'
+  }, {
+    activity: "Going camping with my daughter and a couple of friends and their kids",
+    batch: 'batch4'
+  }, {
+    activity: "Going to Sheffield to meet my friend Christian",
+    batch: 'batch4'
+  }, {
+    activity: "Meet with my old work colleagues for lunch on Friday",
+    batch: 'batch4'
+  }, {
+    activity: "Going to the zoo on the weekend with my partner and our daughter",
+    batch: 'batch4'
+  }, {
+    activity: "Going to a the lake district for a long weekend on Friday",
+    batch: 'batch4'
+  }, {
+    activity: "Playing bass guitar for a concert which starts today and will end on Wednesday next week",
+    batch: 'batch4'
+  }, {
+    activity: "Hiking to the top of a pike for a picnic",
+    batch: 'batch4'
+  }, {
+    activity: "Redecorating the bathroom with a cork finish for more comfort",
+    batch: 'batch4'
+  }, {
+    activity: "Going for a walk in the Peak District with my girlfriend on the weekend",
+    batch: 'batch4'
+  }, {
+    activity: "Continuing my patchwork quilt I have started",
+    batch: 'batch4'
+  }, {
+    activity: "Attending a folk music festival on Friday",
+    batch: 'batch4'
+  }, {
+    activity: "Going to a boot fair to look for bargains to keep and to sell on",
+    batch: 'batch4'
+  }, {
+    activity: "Going to visit my friend's foster kittens",
+    batch: 'batch4'
+  }, {
+    activity: "Car training with my dog as she is frightened of traffic",
+    batch: 'batch4'
+  }, {
+    activity: "Going on a 22km cycle with my son",
+    batch: 'batch4'
+  }, {
+    activity: "Going bouldering (rock climbing) for a couple of hours, either next Monday or Tuesday",
+    batch: 'batch4'
+  }, {
+    activity: "Taking my kids out on their bikes to learn how to cycle",
+    batch: 'batch4'
+  }, {
+    activity: "Taking my children to build a bear workshop, to build a bear each with the vouchers I got for them",
+    batch: 'batch4'
+  }, {
+    activity: "Spending the day with my niece who lives away from our home town and who I do not get to see very often",
+    batch: 'batch4'
+  }, {
+    activity: "Meeting my new baby nephew, Kian",
+    batch: 'batch4'
+  }, {
+    activity: "Getting a Swedish massage at a day spa",
+    batch: 'batch4'
+  }, {
+    activity: "Going to mentor a new start up",
+    batch: 'batch4'
+  }, {
+    activity: "Spending two days at Peppa Pig World in Hampshire with my family",
+    batch: 'batch4'
+  }, {
+    activity: "Going to the local library with my husband to download books from 9am-11am",
+    batch: 'batch4'
+  }, {
+    activity: "Going bowling with my family on Monday morning at 9.30am, to complete one game of 10 pin bowling with my family",
+    batch: 'batch4'
+  }, {
+    activity: "Challenging myself to read for 12hours, starting at 09.00 finish at 21.00",
+    batch: 'batch4'
+  }, {
+    activity: "Going to the gym on Saturday to do cardio for 35 minutes, followed by weights for 30 minutes then swimming",
+    batch: 'batch4'
+  }, {
+    activity: "Going to see a concert of a tribute band of the Electric Light Orchestra on Friday",
+    batch: 'batch4'
+  }, {
+    activity: "Training for a trail running race",
+    batch: 'batch4'
+  }, {
+    activity: "Doing a DIY activity found on Pinterest which involves creating Star Wars light switch plate covers",
+    batch: 'batch4'
+  }, {
+    activity: "Seeing a live theatre show and having dinner with my Mum, Colleen",
+    batch: 'batch4'
+  }, {
+    activity: "I am going to a music festival with my girlfriend this weekend, at which my band are performing on the Sunday",
+    batch: 'batch4'
+  }, {
+    activity: "Swimming with my swimming club at 7pm on Monday until 8:30pm",
+    batch: 'batch4'
+  }, {
+    activity: "Going to a pokemon go raid to catch a Mewtwo",
+    batch: 'batch4'
+  }, {
+    activity: "Visiting my cousin Sam and staying over at her apartment near the beach",
+    batch: 'batch4'
+  }, {
+    activity: "Going to an aerial silks class and practicing for a routine at the end of the year on Monday",
+    batch: 'batch4'
+  }, {
+    activity: "Going sea fishing with my daughter",
+    batch: 'batch4'
+  }, {
+    activity: "Watching my partner have a c-section for the birth of my second child",
+    batch: 'batch4'
+  }, {
+    activity: "Going to motorcycle holiday in Wales",
+    batch: 'batch4'
+  }, {
+    activity: "On Sunday, my family and I are going to a local event called 'Festival of Heroes' at a nearby Roman Villa",
+    batch: 'batch4'
+  }, {
+    activity: "Picking my daughter up from Manchester airport on Sunday at 7.55am who has been away for 12 months",
+    batch: 'batch4'
+  }, {
+    activity: "Playing Dungeons and Dragons with my friends Sunday afternoon-evening",
+    batch: 'batch4'
   }
 ];
